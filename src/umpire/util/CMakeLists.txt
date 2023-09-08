@@ -73,14 +73,15 @@ endif()
 
 if (UMPIRE_ENABLE_MPI)
   set (umpire_util_depends
-    ${umpire_util_depends}
-    mpi)
+       ${umpire_util_depends}
+       ${umpire_mpi_deps}
+    )
 endif ()
 
 if (UMPIRE_ENABLE_OPENMP_TARGET)
   set (umpire_util_depends
-    ${umpire_util_depends}
-    openmp)
+       ${umpire_util_depends}
+       ${umpire_openmp_deps})
 endif ()
 
 if (UMPIRE_ENABLE_HIP)
